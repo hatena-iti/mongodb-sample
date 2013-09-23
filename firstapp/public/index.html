@@ -1,0 +1,75 @@
+<!--
+/* Copyright 2013 Intelligent Technology Inc.
+ *
+ * Released under the MIT license
+ * See http://opensource.org/licenses/mit-license.php for full text.
+ */
+-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>サーバサイドJavaScriptサンプル</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js"></script>
+<script type="text/javascript" src="javascripts/reference.js"></script>
+<script type="text/javascript" src="javascripts/rest.js"></script>
+<script type="text/javascript" src="javascripts/extendJQuery.js"></script>
+</head>
+
+<body>
+<span><b>参考URL</b></span><br>
+<table id="dataTable" border="1">
+    <thead>
+        <tr>
+            <th></th>
+            <th><input type='button' data-sortKey='sitename' value='昇順' data-sortOrder='ascendingOrder'></th>
+            <th><input type='button' data-sortKey='desc' value='昇順' data-sortOrder='ascendingOrder'></th>
+            <th><input type='button' data-sortKey='name' value='昇順' data-sortOrder='ascendingOrder'></th>
+            <th></th>
+            <th><input type='button' data-sortKey='rate' value='昇順'data-sortOrder='ascendingOrder'></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th><input type='button' data-sortKey='sitename' value='降順' data-sortOrder='descendingOrder'></th>
+            <th><input type='button' data-sortKey='desc' value='降順' data-sortOrder='descendingOrder'></th>
+            <th><input type='button' data-sortKey='name' value='降順' data-sortOrder='descendingOrder'></th>
+            <th></th>
+            <th><input type='button' data-sortKey='rate' value='降順' data-sortOrder='descendingOrder'></th>
+        </tr>
+        <tr>
+            <th></th><th>サイト名</th><th>説明</th><th>登録者</th><th>コメント</th><th>レート</th>
+        </tr>
+    </thead>
+    <tbody id='tableItems'></tbody>
+</table>
+<div id="form">
+	<br>
+    <div>
+		<br>
+        <span><b>&lt;URL登録&gt;</b></span><br>
+        <span>サイト名:</span><span><input type="text" id="sitename"></span><br>
+        <span>URL:</span><span><input type="text" id="url"></span><br>
+        <span>説明:</span><span><input type="text" id="desc"></span><br>
+        <span>登録者:</span><span><input type="text" id="name"></span><br>
+        <span>評価(5段階):</span><span><input type="text" id="rate"></span><br>
+        <button value="新規" id="save">新規</button>
+        <button value="更新" id="update">更新</button>
+        <button value="削除" id="remove">削除</button>
+		<br>
+    </div>
+    <div>
+		<br>
+        <span><b>&lt;コメント&gt;</b></span><br>
+        <span>名前:<input type="text" id="commentName"></span><br>
+        <span>コメント:<input type="text" id="commentContents"></span><br>
+        <button value="コメント追加" id="addComment">コメント追加</button><br>
+    </div>
+    <div>
+		<br>
+        <span><b>&lt;検索&gt;</b></span><br>
+        <span>登録者:<input type="text" id="searchName"></span><br>
+        <button value="検索" id="search">検索</button>
+    </div>
+</div>
+</body>
+</html>
